@@ -1,6 +1,8 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import Webcam from "react-webcam";
 
+//@ts-ignore
+import { v4 as uuidv4 } from 'uuid';
 import { Button } from "@/components/ui/button";
 import { Input } from '@/components/ui/input';
 import { handleRegister } from '@/fakebackend/auth';
@@ -39,7 +41,8 @@ const CustomWebcam = ({setLoader} : {setLoader:  React.Dispatch<React.SetStateAc
             setMessage("Please enter your name.");
             return;
         }
-        socket.emit("subscribe", "email");
+        
+        socket.emit("subscribe", uuidv4());
         if(webCamRef.current){
             // const formData = new FormData();
             let file1 = webCamRef.current.getScreenshot();

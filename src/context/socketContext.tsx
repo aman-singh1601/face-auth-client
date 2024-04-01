@@ -9,7 +9,7 @@ const SocketContext = React.createContext<SocketContextType | null>(null);
 
 const SocketProvider = ({ children }: { children: React.ReactNode }) => {
 
-    const socket = useMemo(() => io('http://localhost:6970'),[]);
+    const socket = useMemo(() => io('https://face-auth-server-fsp0.onrender.com'),[]);
 
     const socketContextValue: SocketContextType = {
         socket: socket,
