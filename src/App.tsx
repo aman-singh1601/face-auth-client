@@ -17,6 +17,8 @@ import CustomWebcam from './components/custom/CustomWebCam';
 import InputWebCam from './components/custom/InputWebCam';
 import { useSocket } from './context/socketContext';
 import { ProgressDemo } from './components/custom/ProgressBar';
+//@ts-ignore
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
@@ -32,6 +34,7 @@ function App() {
     socket.on('connect', () => {
       console.log('socket connected');
     });
+    socket.emit("subscribe", uuidv4());
 
     return () => {
       socket.off("connect", () => {
