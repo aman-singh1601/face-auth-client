@@ -24,7 +24,7 @@ const CustomWebcam = ({setLoader} : {setLoader:  React.Dispatch<React.SetStateAc
     const [label, setLabel] = useState<string>("");
     const [file1, setFile1] = useState<string>("");
     const [file2, setFile2] = useState<string>("");
-    const [file3, setFile3] = useState<string>("");
+    // const [file3, setFile3] = useState<string>("");
 
     const [loading, setLoading] = useState<boolean>(false);
 
@@ -55,7 +55,7 @@ const CustomWebcam = ({setLoader} : {setLoader:  React.Dispatch<React.SetStateAc
                 setLoader(true);
             }
         }
-    }, [webCamRef, label, file1, file2, file3]);
+    }, [webCamRef, label, file1, file2]);
 
 
     useEffect(() => {
