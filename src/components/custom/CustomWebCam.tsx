@@ -49,8 +49,9 @@ const CustomWebcam = ({setLoader} : {setLoader:  React.Dispatch<React.SetStateAc
             if(file1 && file2 && file3) {
                 setFile1(file1);
                 setFile2(file2);
-                setFile3(file3);
-                handleRegister({label, file1, file2, file3, setMessage, setLoading});
+                // setFile3(file3);
+                // handleRegister({label, file1, file2, file3, setMessage, setLoading});
+                handleRegister({label, file1, file2, setMessage, setLoading});
                 setLoader(true);
             }
         }

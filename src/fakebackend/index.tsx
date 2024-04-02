@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: 'https://face-auth-server-fsp0.onrender.com',
+    // baseURL: 'https://face-auth-server-fsp0.onrender.com',\
+    baseURL: "http://localhost:6969"
 });
 
 

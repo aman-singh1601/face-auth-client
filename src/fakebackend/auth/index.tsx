@@ -39,14 +39,14 @@ const handleRegister = async ({
     label,
     file1,
     file2,
-    file3,
+    // file3,
     setMessage,
     setLoading
     }: {
     label: string;
     file1: string;
     file2: string;
-    file3: string;
+    // file3: string;
     setMessage: React.Dispatch<React.SetStateAction<string | null>>;
     setLoading: React.Dispatch<React.SetStateAction<boolean>>,
 }) => {
@@ -61,7 +61,7 @@ const handleRegister = async ({
          //@ts-ignore
         formData.append('File2', file2);
          //@ts-ignore
-        formData.append('File3', file3);
+        // formData.append('File3', file3);
 
         const {data}: {data: registerDataProps} = await axios.post("/api/create-face", formData);
         if(data.message) setMessage(data.message);
